@@ -40,13 +40,14 @@ p1 <- kd %>%
   ggtitle(bquote("Árlegar fæðingar á Íslandi 1970-2020")) +
   guides(color=guide_legend(title="Gerð fæðingar:")) +
   theme_classic()  +
-  theme(legend.position = "bottom")
+  theme(legend.position = "bottom",
+        text = element_text(size = 13))
 
 ggsave(
   p1,
   filename = "Figures/p1.png",
-  height = height1,
-  width = width1
+  height = height1-2,
+  width = width1-2
 )
 
 # pic 2
