@@ -46,8 +46,8 @@ p1 <- kd %>%
 ggsave(
   p1,
   filename = "Figures/p1.png",
-  height = height1-2,
-  width = width1-2
+  height = height1,
+  width = width1
 )
 
 # pic 2
