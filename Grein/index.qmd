@@ -1,0 +1,52 @@
+---
+title: "Fæðingartíðni á Íslandi"
+pagetitle: "Fæðingartíðni á Íslandi"
+subtitle: "Tímaraðagreining á daglegum fæðingum frá 1990 til 2021"
+description: |
+  Var fæðingartíðni breytileg til langs tíma litið eða eftir árstíðum? Eru merki um að dagsetningar valkeisaraskurða á Íslandi hafi áhrif á fæðingartíðni eftir vikudögum, dögum ársins, eða fljótandi hátíðardögum?
+author: 
+    -   name: "Rafael Daníel Vias"
+        url: "https://github.com/RafaelVias"
+        affiliation: "Tölfræði, Raunvísindadeild Háskóla Íslands"
+        affiliation-url: "https://www.hi.is/framhaldsnam/tolfraedi"
+date: "2023/03/17"
+format: 
+    html:
+        code-fold: true
+        page-layout: full
+        smooth-scroll: true
+        link-external-newwindow: true
+editor: source
+categories:
+    - fæðingartíðni
+    - valkeisaraskurðir
+href: greinar/faedingartidni/index.qmd
+image: https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/Figures/p11.png
+twitter-card:
+    image: https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/Figures/p11.png
+bibliography: references.bib
+---
+
+------------------------------------------------------------------------
+
+Í mörgum tilfellum stýra foreldrar því hvenær börn þeirra fæðast. Hafi þeir ákveðið að eignast barn geta þeir miðað níu mánuði fram í tímann og sett markið á ákveðinn hluta ársins. Í einhverjum tilfellum fá þó foreldrar einnig að velja nákvæma dagsetningu. Það er þegar keisaraskurður er fyrir fram ákveðinn (valkeisaraskurður) og þeim gert að velja fæðingardaginn í samráði við lækni. Ef hlutfall valkeisaraskurða af heildarfjölda fæðinga er nógu hátt ættu áhrif slíkra ákvarðana (ef einhver) að birtast sem breytileg fæðingartíðni eftir vikudögum eða dögum ársins. Myndu ekki flestir foreldrar síður kjósa að barnið sitt ætti afmæli 29. febrúar ef þeim stæði annar dagur til boða? Einnig er hægt að hugsa sér að valkeisaraskurðum hafa verið stýrt frá þeim hátíðardögum sem eru samningsbundnir frídagar lækna.
+
+------------------------------------------------------------------------
+
+### Um gögnin
+
+Notuð eru tvö gagnasett. [Fyrra gagnasettið](https://github.com/RafaelVias/iceland_birth_data/blob/main/daily_births.csv) sýnir daglegar fæðingar á Íslandi á árunum 1990-2021 (Hagstofa Íslands). [Seinna gagnasettið](https://github.com/RafaelVias/iceland_birth_data/blob/main/caesarian.csv), árlegar fæðingar á Íslandi á árunum 1970-2020 eftir gerð, þ.e. eðlileg fæðing eða keisaraskurður (Fæðingaskrá, kvennadeild LSH).
+
+------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
