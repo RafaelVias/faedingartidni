@@ -29,13 +29,15 @@ bibliography: https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/r
 
 ------------------------------------------------------------------------
 
-Í mörgum tilfellum reyna foreldrar að stjórna því hvenær á árinu börn þeirra fæðast. Hafi þeir ákveðið að eignast barn geta þeir miðað níu mánuði fram í tímann og sett markið á ákveðinn hluta ársins. Í einhverjum tilfellum fá foreldrar þó einnig að velja afmælisdag barnsins. Það er þegar keisaraskurður er fyrir fram ákveðinn (valkeisaraskurður) og þeim gert að velja fæðingardaginn í samráði við lækni. Ef hlutfall valkeisaraskurða af heildarfjölda fæðinga er nógu hátt ættu áhrif slíkra ákvarðana (ef einhver) að birtast sem breytileg fæðingartíðni eftir vikudögum, dögum ársins eða fljótandi hátíðardögum (t.d. páskadagur). Myndu ekki flestir foreldrar síður kjósa að barnið sitt ætti afmæli 29. febrúar ef þeim stæði annar dagur til boða? Einnig er hægt að hugsa sér að valkeisaraskurðum sé stýrt frá þeim hátíðardögum sem eru samningsbundnir frídagar lækna.
+<!-- Foreldrar geta reynt að hafaað stjórna því hvenær á árinu börn þeirra fæðast. Hafi þeir ákveðið að eignast barn geta þeir miðað níu mánuði fram í tímann og sett markið á ákveðinn hluta ársins. Í einhverjum tilfellum fá foreldrar þó einnig að velja afmælisdag barnsins.  -->
+
+Það er þegar keisaraskurður er fyrir fram ákveðinn (valkeisaraskurður) er foreldrum gert að velja fæðingardaginn í samráði við lækni. Ef hlutfall valkeisaraskurða af heildarfjölda fæðinga er nógu hátt ættu áhrif slíkra ákvarðana (ef einhver) að birtast sem breytileg fæðingartíðni eftir vikudögum, dögum ársins eða fljótandi hátíðardögum (t.d. páskadagur). Myndu ekki flestir foreldrar síður kjósa að barnið sitt ætti afmæli 29. febrúar ef þeim stæði annar dagur til boða? Einnig er hægt að hugsa sér að valkeisaraskurðum sé stýrt frá þeim hátíðardögum sem eru samningsbundnir frídagar lækna.
 
 ------------------------------------------------------------------------
 
 ### Um gögnin
 
-Notuð eru tvö gagnasett. [Fyrra gagnasettið](https://github.com/RafaelVias/faedingartidni/blob/main/Data/daily_births.csv) sýnir daglegar fæðingar á Íslandi á árunum 1990-2021 (Hagstofa Íslands). [Seinna gagnasettið](https://github.com/RafaelVias/faedingartidni/blob/main/Data/caesarian.csv), árlegar fæðingar á Íslandi á árunum 1970-2020 eftir gerð, þ.e. eðlileg fæðing eða keisaraskurður (Fæðingaskrá, kvennadeild LSH).
+Notuð eru tvö gagnasett. [Fyrra gagnasettið](https://github.com/RafaelVias/faedingartidni/blob/main/Data/daily_births.csv) sýnir daglegar fæðingar á Íslandi á árunum 1990-2021 (Hagstofa Íslands). [Seinna gagnasettið](https://github.com/RafaelVias/faedingartidni/blob/main/Data/caesarian.csv), árlegar fæðingar á Íslandi á árunum 1970-2020 eftir gerð, þ.e. leggangafæðing eða keisaraskurður (Fæðingaskrá, kvennadeild LSH).
 
 ------------------------------------------------------------------------
 
@@ -45,7 +47,7 @@ knitr::opts_chunk$set(message=FALSE, error=FALSE, warning=FALSE)
 
 ### Rýnt í gögnin
 
-Valkeisaraskurðir eru greiningu okkar mikilvægir vegna þess að þeir stýra áhrifum vikudaga og daga ársins á fæðingartíðni. Tíðni eðlilegra fæðinga á Íslandi (blár ferill) sveiflaðist til á árunum 1970-2020 en langtímahneigðin virðist halla niður á við. Aftur á móti margfaldaðist fjöldi keisaraskurða yfir tímabilið (rauður ferill).
+Valkeisaraskurðir eru greiningu okkar mikilvægir vegna þess að þeir stýra áhrifum vikudaga og daga ársins á fæðingartíðni. Tíðni leggangafæðinga á Íslandi (blár ferill) sveiflaðist til á árunum 1970-2020 en langtímahneigðin virðist halla niður á við. Aftur á móti margfaldaðist fjöldi keisaraskurða yfir tímabilið (rauður ferill).
 
 ![](https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/Figures/p1.png){width="75%"}
 

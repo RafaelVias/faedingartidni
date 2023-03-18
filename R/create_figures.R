@@ -36,7 +36,7 @@ p1 <- kd %>%
   scale_y_continuous(limits = c(0,NA),
                      expand = expansion(mult = c(0,0.1))) +
   scale_color_manual(values = c(set1[1],set1[2]),
-                     labels = c("natural"="Eðlileg","caesarian"="Keisari")) +
+                     labels = c("natural"="Leggangafæðing","caesarian"="Keisaraskurður")) +
   ggtitle(bquote("Árlegar fæðingar á Íslandi 1970-2020")) +
   guides(color=guide_legend(title="Gerð fæðingar:")) +
   theme_classic()  +
