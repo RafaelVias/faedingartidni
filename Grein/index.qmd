@@ -31,7 +31,7 @@ bibliography: https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/r
 
 <!-- Foreldrar geta reynt að hafaað stjórna því hvenær á árinu börn þeirra fæðast. Hafi þeir ákveðið að eignast barn geta þeir miðað níu mánuði fram í tímann og sett markið á ákveðinn hluta ársins. Í einhverjum tilfellum fá foreldrar þó einnig að velja afmælisdag barnsins.  -->
 
-Það er þegar keisaraskurður er fyrir fram ákveðinn (valkeisaraskurður) er foreldrum gert að velja fæðingardaginn í samráði við lækni. Ef hlutfall valkeisaraskurða af heildarfjölda fæðinga er nógu hátt ættu áhrif slíkra ákvarðana (ef einhver) að birtast sem breytileg fæðingartíðni eftir vikudögum, dögum ársins eða fljótandi hátíðardögum (t.d. páskadagur). Myndu ekki flestir foreldrar síður kjósa að barnið sitt ætti afmæli 29. febrúar ef þeim stæði annar dagur til boða? Einnig er hægt að hugsa sér að valkeisaraskurðum sé stýrt frá þeim hátíðardögum sem eru samningsbundnir frídagar lækna.
+Þegar keisaraskurðir eru fyrir fram ákveðnir (valkeisaraskurðir) fá foreldrar að velja fæðingardaginn í samráði við lækni. Ef hlutfall valkeisaraskurða af heildarfjölda fæðinga er nógu hátt ættu áhrif slíkra ákvarðana (ef einhver) að birtast sem breytileg fæðingartíðni eftir vikudögum, dögum ársins eða fljótandi hátíðardögum (t.d. páskadagur). Myndu ekki flestir foreldrar síður kjósa að barnið sitt ætti afmæli 29. febrúar ef þeim stæði annar dagur til boða? Einnig er hægt að hugsa sér að valkeisaraskurðum sé stýrt frá þeim hátíðardögum sem eru samningsbundnir frídagar lækna. Hér verður gerð tímaraðagreining á daglegum fæðingum á Íslandi yfir tímabilið 1990-2021.
 
 ------------------------------------------------------------------------
 
