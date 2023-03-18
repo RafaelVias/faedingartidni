@@ -81,7 +81,7 @@ Myndin hér að neðan sýnir niðurstöður tölfræðilíkansins sem mátað e
 
 ![](https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/Figures/p12.png){width="90%"}
 
-Á myndinni efst til vinstri má sjá gögnin (bláir punktar) og væntigildi líkansins (rauður ferill). Væntigildið er summa fjögurra þátta: langtímahneigðar (f1), árstíðaráhrifa (f2), vikudagaáhrifa (f3), og áhrifa daga ársins sem og fljótandi hátíðardaga (f4). Fljótandi hátíðardagar eru þeir hátíðardagar sem lenda ekki á sama degi ársins ár hvert (t.d. páskadagur).
+Á myndinni efst til vinstri má sjá gögnin (bláir punktar) og væntigildi líkansins (rauður ferill). Væntigildið er summa fjögurra þátta: langtímahneigðar (f1), árstíðaráhrifa (f2), vikudagaáhrifa (f3) og áhrifa daga ársins sem og fljótandi hátíðardaga (f4). Fljótandi hátíðardagar eru þeir hátíðardagar sem lenda ekki á sama degi ársins ár hvert (t.d. páskadagur).
 
 Myndin efst hægra megin sýnir hvernig langtímahneigðin (rauður ferill) breytist yfir tímabilið. Ferillinn fer úr hámarkinu í upphafi tímabilsins niður í lágmarkið stuttu eftir aldarmótin. Rís svo aftur upp og nær staðbundnu hámarki stuttu eftir bankahrun eða um 2010. Því næst lækkar ferillinn aftur þar til stuttu fyrir heimsfaraldurinn 2020 þegar hann tekur að rísa á ný.
 
