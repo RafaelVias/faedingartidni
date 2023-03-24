@@ -25,7 +25,7 @@ kd <- read_csv("Data/caesarian.csv")
 # parameters
 
 height1 <- 5
-width1 <- 7
+width1 <- 10
 
 # pic 1
 
@@ -174,7 +174,7 @@ p7 <- d %>%
                      expand = expansion(mult = scale_y))+
   labs(x="",
        y="Hlutf. fjöldi fæðinga") +
-  ggtitle("Allir þættir líkansins (f1+f2+f3+f4)") +
+  ggtitle("Væntigildi líkansins (f1+f2+f3+f4)") +
   theme_metill() #+
   # theme(plot.title = element_text(size=18))
 

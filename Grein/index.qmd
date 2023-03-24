@@ -49,27 +49,27 @@ knitr::opts_chunk$set(message=FALSE, error=FALSE, warning=FALSE)
 
 Valkeisaraskurðir eru greiningu okkar mikilvægir vegna þess að þeir stýra áhrifum vikudaga og daga ársins á fæðingartíðni. Tíðni leggangafæðinga á Íslandi (blár ferill) sveiflaðist til á árunum 1970-2020 en langtímahneigðin virðist halla niður á við. Aftur á móti margfaldaðist fjöldi keisaraskurða yfir tímabilið (rauður ferill).
 
-![](https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/Figures/p1.png){width="75%"}
+![](https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/Figures/p1.png){width="85%"}
 
 Ef fjöldi keisaraskurða er skoðaður sem hlutfall allra fæðinga má sjá hvernig hlutfallið óx frá 1970 til 2000 og virðist svo hafa náð jafnvægi rétt ofan við efri mörk 10%-15% viðmiðs Alþjóðaheilbrigðismálastofnunarinnar (WHO). Meðaltalið á heimsvísu fyrir tímabilið 2010--2018 var um 21% [@Betrane005671].
 
-![](https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/Figures/p2.png){width="75%"}
+![](https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/Figures/p2.png){width="100%"}
 
 Gögnin sem verða notuð í tímaraðagreininguna hér að neðan voru fengin frá Hagstofu Íslands og sýna fjölda daglegra fæðinga á Íslandi á árunum 1990-2021.
 
-![](https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/Figures/p3.png){width="75%"}
+![](https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/Figures/p3.png){width="85%"}
 
 Með því að reikna meðalfjölda fæðinga yfir allt tímabilið fyrir hvern dag ársins má sjá að fæðingartíðni var breytileg eftir tíma ársins.
 
-![](https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/Figures/p4.png){width="75%"}
+![](https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/Figures/p4.png){width="85%"}
 
 Þegar meðalfjöldi fæðinga er reiknaður eftir vikudögum sjást skýr vikudagaáhrif. Fleiri börn fæddust á virkum dögum heldur en um helgar, flestar fæðingar voru á þriðjudögum og fæstar á sunnudögum.
 
-![](https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/Figures/p5.png){width="75%"}
+![](https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/Figures/p5.png){width="85%"}
 
 Enn fremur, ef meðaltölin eru reiknuð fyrir þrjú aðskilin tímabil má sjá að í seinni tíð hefur valkeisaraskurðum verið stýrt í auknum mæli á þriðjudaga og fimmtudaga.
 
-![](https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/Figures/p6.png){width="75%"}
+![](https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/Figures/p6.png){width="85%"}
 
 ------------------------------------------------------------------------
 
