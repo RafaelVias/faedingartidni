@@ -24,7 +24,7 @@ kd <- read_csv("Data/caesarian.csv")
 
 # parameters
 
-height1 <- 6
+height1 <- 5
 width1 <- 10
 
 # pic 1
