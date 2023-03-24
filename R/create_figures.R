@@ -24,7 +24,7 @@ kd <- read_csv("Data/caesarian.csv")
 
 # parameters
 
-height1 <- 5
+height1 <- 6
 width1 <- 10
 
 # pic 1
@@ -302,7 +302,7 @@ ggsave(
 ggsave(
   (p7+p8)/(p9+p10)/p11,
   filename = "Figures/p12.png",
-  height = 10,
+  height = 12,
   width = width1
 )
   
