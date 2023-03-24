@@ -78,7 +78,7 @@ model {
   beta_f2 ~ normal(0, 1);
   beta_f3 ~ normal(0, 1);
   beta_f4 ~ student_t(nu_f4, 0, sigma_f4);      // double_exponential
-  beta_f5 ~ normal(0, sigma_f5);      // normal(0, 1)
+  beta_f5 ~ student_t(nu_f4, 0, sigma_f4);      // normal(0, 1)
   lengthscale_f1 ~ lognormal(log(700/xsd), 1);
   lengthscale_f2 ~ normal(0, .1); 
   sigma_f1 ~ normal(0, 1);

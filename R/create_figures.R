@@ -13,6 +13,7 @@ library(qqplotr)
 library(timeDate)
 library(gridExtra)
 library(grid)
+source("R/help_functions.R")
 set1 <- RColorBrewer::brewer.pal(7, "Set1")
 Sys.setlocale("LC_TIME", "en_GB.UTF-8")
 
@@ -31,7 +32,7 @@ width1 <- 7
 p1 <- kd %>%  
   pivot_longer(cols = c("natural","caesarian")) %>% 
   ggplot(aes(year,value,color=name)) +
-  geom_line(linewidth=1)+
+  geom_line(linewidth=1) +
   labs(x="Dagsetning", y="Fjöldi") + 
   scale_y_continuous(limits = c(0,NA),
                      expand = expansion(mult = c(0,0.1))) +
@@ -39,9 +40,8 @@ p1 <- kd %>%
                      labels = c("natural"="Leggangafæðing","caesarian"="Keisaraskurður")) +
   ggtitle(bquote("Árlegar fæðingar á Íslandi 1970-2020")) +
   guides(color=guide_legend(title="Gerð fæðingar:")) +
-  theme_classic()  +
-  theme(legend.position = "bottom",
-        text = element_text(size = 13))
+  theme_metill() +
+  theme(legend.position = "bottom") 
 
 ggsave(
   p1,
@@ -61,8 +61,8 @@ p2 <- kd %>%
                      expand = expansion(mult = c(0,0.1))) +
   scale_fill_identity(name = '', guide = 'legend',labels = c('10%-15% viðmið Alþjóðaheilbrigðismálastofnunarinnar')) +
   ggtitle(bquote("Hlutfall keisaraskurða við fæðingar á Íslandi 1970-2020"))+
-  theme_classic() +
-  theme(legend.position = "bottom")
+  theme_metill()+
+  theme(legend.position = "bottom") 
 
 ggsave(
   p2,
@@ -77,8 +77,8 @@ p3 <- d %>%
   ggplot(aes(x=date, y=births)) + 
   geom_point(color=set1[2],alpha=.2) +
   labs(x="Dagsetning", y="Fjöldi fæðinga") +
-  ggtitle(bquote("Daglegar fæðingar á Íslandi 1990-2021"))+
-  theme_classic()
+  ggtitle(bquote("Daglegar fæðingar á Íslandi 1990-2021")) +
+  theme_metill()
 
 ggsave(
   p3,
@@ -97,7 +97,7 @@ p4 <- d %>%
   scale_x_date(date_breaks = "1 month", date_labels = "%b") +
   ggtitle(bquote("Meðalfjöldi fæðinga eftir dögum ársins"))+
   labs(x="Dagur árs", y="Meðalfjöldi fæðinga") +
-  theme_classic()
+  theme_metill()
 
 ggsave(
   p4,
@@ -119,7 +119,7 @@ p5 <- d %>%
                      labels=c('Mán','Þri','Mið','Fim','Fös','Lau','Sun')) +
   labs(x="Dagur vikunnar", y="Meðalfjöldi fæðinga") +
   ggtitle(bquote("Meðalfjöldi fæðinga eftir vikudögum"))+
-  theme_classic()
+  theme_metill()
 
 ggsave(
   p5,
@@ -146,8 +146,8 @@ p6 <- d %>%
   scale_color_brewer()+
   ggtitle(bquote("Meðalfjöldi fæðinga eftir vikudögum yfir þrjú tímabil"))+
   guides(color=guide_legend(title="Tímabil:")) +
-  theme_classic() +
-  theme(legend.position="bottom")
+  theme_metill()+
+  theme(legend.position = "bottom") 
 
 ggsave(
   p6,
@@ -175,7 +175,8 @@ p7 <- d %>%
   labs(x="",
        y="Hlutf. fjöldi fæðinga") +
   ggtitle("Allir þættir líkansins (f1+f2+f3+f4)") +
-  theme_classic()
+  theme_metill() #+
+  # theme(plot.title = element_text(size=18))
 
 p8 <- d %>%
   mutate(Ef1 = Ef1) %>%
@@ -188,7 +189,7 @@ p8 <- d %>%
   labs(x="",
        y="Hlutf. fjöldi fæðinga") +
   ggtitle("Langtímahneigð (f1)") +
-  theme_classic()
+  theme_metill()
 
 p9 <- d %>%
   mutate(Ef2 = Ef2) %>%
@@ -212,7 +213,7 @@ p9 <- d %>%
   labs(x="",
        y="Hlutf. fjöldi fæðinga") +
   ggtitle("Árstíðaráhrif (f2)") +
-  theme_classic()
+  theme_metill()
 
 p10 <- ggplot(data=data.frame(x=rep(1:7,6),
                               y=Ef_day_of_week,
@@ -239,8 +240,8 @@ p10 <- ggplot(data=data.frame(x=rep(1:7,6),
            label=c('Mán','Þri','Mið','Fim','Fös','Lau','Sun')) +
   labs(x="",
        y="Hlutf. fjöldi fæðinga") +
-  theme_classic() +
   ggtitle("Vikudagaáhrif (f3)") +
+  theme_metill() +
   theme(legend.position = "none")
 
 p11 <- data.frame(x=as.Date("1992-01-01")+0:365, y=Ef4float) %>%
@@ -286,24 +287,20 @@ p11 <- data.frame(x=as.Date("1992-01-01")+0:365, y=Ef4float) %>%
   annotate("text",x=as.Date("1993-01-01"),y=Ef4float[366]+4,label="Gamlársd.",size=dfs) +
   theme_classic() +
   ggtitle("Áhrif daga ársins og fljótandi hátíðardaga (f4)") +
+  theme_metill()+
   theme(legend.position = "bottom",
-        legend.margin = margin(t = 0, unit='cm'))
+        legend.margin = margin(t = 0, unit='cm')) 
 
 ggsave(
-  p11+ggtitle("Áhrif daga ársins og fljótandi hátíðardaga"),
-  filename = "Figures/p11.png",
+  p11+ggtitle("Áhrif daga ársins og fljótandi hátíðardaga") + theme_metill(type="blog")+ theme(legend.position = "bottom",legend.margin = margin(t = 0, unit='cm')),
+  filename = "Figures/feature_pic.png",
   height = height1,
   width = width1
 )
 
-p12 <- grid.arrange(arrangeGrob(p7,p8,ncol=2),
-                    arrangeGrob(p9,p10,ncol=2),
-                    p11, 
-                    nrow=3,
-                    heights=c(1,1,1))
 
 ggsave(
-  p12,
+  (p7+p8)/(p9+p10)/p11,
   filename = "Figures/p12.png",
   height = 10,
   width = width1

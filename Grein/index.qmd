@@ -21,9 +21,9 @@ categories:
     - fæðingartíðni
     - valkeisaraskurðir
 href: greinar/faedingartidni/index.qmd
-image: https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/Figures/p11.png
+image: https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/Figures/feature_pic.png
 twitter-card:
-    image: https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/Figures/p11.png
+    image: https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/Figures/feature_pic.png
 bibliography: https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/references.bib
 ---
 

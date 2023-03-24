@@ -38,7 +38,7 @@ standata <- list(x=d$id,
                  frid_verzlunarm=frid_verzlunarm )
 
 # run model
-model <- cmdstan_model(stan_file = "Stan/student_float.stan")
+model <- cmdstan_model(stan_file = "Stan/normal_float.stan")
 opt <- model$optimize(data=standata, init=0, algorithm='lbfgs',
                       history=100, tol_obj=10)
 odraws <- opt$draws()
