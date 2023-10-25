@@ -244,8 +244,8 @@ p10 <- ggplot(data=data.frame(x=rep(1:7,7),
   labs(x="",
        y="Hlutf. fjöldi fæðinga (%)") +
   ggtitle("Vikudagaáhrif (f3)") + 
-  theme(legend.position = "none") +
-  theme_metill()
+  theme_metill() +
+  theme(legend.position = "none") 
 
 p11 <- data.frame(x=as.Date("1992-01-01")+0:365, y=Ef4float) %>%
   ggplot(aes(x=x,y=y)) + geom_line(color=set1[1]) +
@@ -279,7 +279,7 @@ p11 <- data.frame(x=as.Date("1992-01-01")+0:365, y=Ef4float) %>%
   annotate("text",x=as.Date("1992-02-29"),y=Ef4float[60]-3,label="29. feb.",size=dfs)+
   annotate("text",x=as.Date("1992-04-19"),y=Ef4float[110]-2,label="Páskad.",size=dfs)+
   annotate("text",x=as.Date("1992-06-07"),y=Ef4float[159]-2,label="Hvítasunnud.",size=dfs)+
-  annotate("text",x=as.Date("1992-05-12"),y=Ef4float[114],label="Sumard.f.",size=dfs)+
+  annotate("text",x=as.Date("1992-05-10"),y=Ef4float[114],label="Sumard.f.",size=dfs)+
   annotate("text",x=as.Date("1992-05-15"),y=Ef4float[122],label="1. maí",size=dfs)+
   annotate("text",x=as.Date("1992-05-22"),y=Ef4float[149]-2,label="Uppst.d.",size=dfs)+
   annotate("text",x=as.Date("1992-06-17"),y=Ef4float[169]+4,label="17. júní",size=dfs)+
@@ -290,9 +290,9 @@ p11 <- data.frame(x=as.Date("1992-01-01")+0:365, y=Ef4float) %>%
   annotate("text",x=as.Date("1993-01-01"),y=Ef4float[366]+4,label="Gamlársd.",size=dfs) +
   theme_classic() +
   ggtitle("Áhrif daga ársins og fljótandi hátíðardaga (f4)") +
+  theme_metill() +
   theme(legend.position = "bottom",
-        legend.margin = margin(t = 0, unit='cm'))  +
-  theme_metill()
+        legend.margin = margin(t = 0, unit='cm'))  
 
 ggsave(
   p11+ggtitle("Áhrif daga ársins og fljótandi hátíðardaga") + theme_metill(type="blog")+ theme(legend.position = "bottom",legend.margin = margin(t = 0, unit='cm')),
