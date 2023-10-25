@@ -3,7 +3,7 @@ title: "Fæðingartíðni á Íslandi"
 pagetitle: "Fæðingartíðni á Íslandi"
 subtitle: "Tímaraðagreining á daglegum fæðingum frá 1990 til og með 2022"
 description: |
-  Var fæðingartíðni breytileg til langs tíma litið eða eftir árstíðum? Hvað með hlutfall keisaraskurða af heildarfjölda fæðinga? Eru merki um að dagsetningar valkeisaraskurða á Íslandi hafi áhrif á fæðingartíðni eftir vikudögum, dögum ársins eða fljótandi hátíðardögum?
+  Var fæðingartíðni breytileg yfir tímabilið, eða eftir árstíðum? Hvað með hlutfall keisaraskurða af heildarfjölda fæðinga? Eru merki um að dagsetningar valkeisaraskurða á Íslandi hafi áhrif á fæðingartíðni eftir vikudögum, dögum ársins eða fljótandi hátíðardögum?
 author: 
     -   name: "Rafael Daníel Vias"
         url: "https://github.com/RafaelVias"
@@ -31,7 +31,7 @@ bibliography: https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/r
 
 <!-- Foreldrar geta reynt að hafaað stjórna því hvenær á árinu börn þeirra fæðast. Hafi þeir ákveðið að eignast barn geta þeir miðað níu mánuði fram í tímann og sett markið á ákveðinn hluta ársins. Í einhverjum tilfellum fá foreldrar þó einnig að velja afmælisdag barnsins.  -->
 
-Þegar keisaraskurðir eru fyrir fram ákveðnir (valkeisaraskurðir) fá foreldrar að velja fæðingardaginn í samráði við lækni. Ef hlutfall valkeisaraskurða af heildarfjölda fæðinga er nógu hátt ættu áhrif slíkra ákvarðana (ef einhver) að birtast sem breytileg fæðingartíðni eftir vikudögum, dögum ársins eða fljótandi hátíðardögum (t.d. páskadagur). Myndu ekki flestir foreldrar síður kjósa að barnið sitt ætti afmæli 29. febrúar ef þeim stæði annar dagur til boða? Einnig er hægt að hugsa sér að valkeisaraskurðum sé stýrt frá þeim hátíðardögum sem eru samningsbundnir frídagar lækna. Hér verður gerð tímaraðagreining á daglegum fæðingum á Íslandi á árunum 1990-2022.
+Þegar keisaraskurðir eru fyrir fram ákveðnir (valkeisaraskurðir) fá foreldrar að velja fæðingardaginn í samráði við lækni. Ef hlutfall valkeisaraskurða af heildarfjölda fæðinga er nógu hátt, þá ættu áhrif slíkra ákvarðana (ef einhver) að birtast sem breytileg fæðingartíðni eftir vikudögum, dögum ársins eða fljótandi hátíðardögum (t.d. páskadagur). Sjáum við t.d. merki um það að foreldrar reyni að afstýra því að barnið sitt eigi afmæli 29. febrúar ef þeim stendur annar dagur til boða? Einnig hlýtur að teljast líklegt að valkeisaraskurðum sé stýrt frá þeim hátíðardögum sem eru samningsbundnir frídagar lækna. Hér leitumst við eftir svörum veið þessum spurningum -- og fleirum -- með því aðgera tímaraðagreining á gögnum Hagstofunnar um daglegum fæðingum á Íslandi á árunum 1990-2022.
 
 ------------------------------------------------------------------------
 
@@ -51,23 +51,23 @@ Valkeisaraskurðir eru greiningu okkar mikilvægir vegna þess að þeir stýra 
 
 ![](https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/Figures/p1.png){width="100%"}
 
-Ef fjöldi keisaraskurða er skoðaður sem hlutfall allra fæðinga má sjá hvernig hlutfallið óx frá 1970 til 2000 og virðist svo hafa náð jafnvægi rétt ofan við efri mörk 10%-15% viðmiðs Alþjóðaheilbrigðismálastofnunarinnar (WHO). Meðaltalið á heimsvísu fyrir tímabilið 2010-2018 var um 21% [@Betrane005671].
+Ef fjöldi keisaraskurða er skoðaður sem hlutfall allra fæðinga má sjá hvernig hlutfallið óx frá 1970 til 2000 og virðist svo hafa náð jafnvægi rétt ofan við efri mörk 10%-15% viðmiðs Alþjóðaheilbrigðismálastofnunarinnar (WHO). Meðaltalið á heimsvísu fyrir tímabilið 2010-2018 var um 21% [(Betran et al., 2021)](https://gh.bmj.com/content/6/6/e005671).
 
 ![](https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/Figures/p2.png){width="100%"}
 
-Gögnin sem verða notuð í tímaraðagreininguna hér að neðan voru fengin frá Hagstofu Íslands og sýna fjölda daglegra fæðinga á Íslandi á árunum 1990-2022.
+[Gögnin](https://github.com/RafaelVias/faedingartidni/blob/main/Data/daily_births.csv) sem verða notuð í tímaraðagreininguna hér að neðan voru fengin frá Hagstofu Íslands með beiðni um sérvinnslu gagna og sýna fjölda daglegra fæðinga á Íslandi á árunum 1990-2022.
 
 ![](https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/Figures/p3.png){width="100%"}
 
-Með því að reikna meðalfjölda fæðinga yfir allt tímabilið fyrir hvern dag ársins má sjá að fæðingartíðni var breytileg eftir tíma ársins.
+Með því að reikna meðalfjölda fæðinga yfir allt tímabilið fyrir hvern dag ársins má sjá að fæðingartíðni var breytileg eftir árstíma.
 
 ![](https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/Figures/p4.png){width="100%"}
 
-Þegar meðalfjöldi fæðinga er reiknaður eftir vikudögum sjást skýr vikudagaáhrif. Fleiri börn fæddust á virkum dögum heldur en um helgar, flestar fæðingar voru á þriðjudögum og fæstar á sunnudögum.
+Þegar meðalfjöldi fæðinga er reiknaður eftir vikudögum sjást skýr vikudagaáhrif. Fleiri börn fæddust á virkum dögum heldur en um helgar, flestar fæðingar voru á þriðjudögum og fæstar á sunnudögum. Hér sjáum við fyrstu ummerki þeirra áhrifa sem val á dagsetningum valkeisaraskurða hafði á fæðingartíðni.
 
 ![](https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/Figures/p5.png){width="100%"}
 
-Enn fremur, ef meðaltölin eru reiknuð fyrir þrjú aðskilin tímabil má sjá að í seinni tíð hefur valkeisaraskurðum verið stýrt í auknum mæli á þriðjudaga og fimmtudaga.
+Ef meðaltölin eru reiknuð fyrir þrjú aðskilin tímabil má sjá að í seinni tíð hefur valkeisaraskurðum verið stýrt í auknum mæli frá mánudögum og miðvikudögum yfir á þriðjudaga og fimmtudaga.
 
 ![](https://raw.githubusercontent.com/RafaelVias/faedingartidni/main/Figures/p6.png){width="100%"}
 
@@ -75,7 +75,7 @@ Enn fremur, ef meðaltölin eru reiknuð fyrir þrjú aðskilin tímabil má sj�
 
 ### Tölfræðilíkan
 
-Til þess að meta áhrif daga ársins þurfum við að einangra langtíma-, árstíðar-, og vikudagaáhrifin. Við búum því til tölfræðilíkan sem metur væntigildi fjölda fæðinga yfir tímabilið sem summu þessara fjögurra þátta. Tölfræðilíkanið er byggt á [líkani](https://github.com/avehtari/casestudies/tree/master/Birthdays) sem búið var til fyrir sambærileg gögn frá Bandaríkjunum.
+Til þess að meta áhrif tiltekinna daga ársins á fæðingartíðni þurfum við að einangra langtíma-, árstíðar-, og vikudagaáhrifin. Við búum því til tölfræðilíkan sem metur væntigildi fjölda fæðinga yfir tímabilið sem summu þessara fjögurra þátta. Tölfræðilíkanið er byggt á líkani [Gelman, Vehtari, Simpson et al. (2022)](https://github.com/avehtari/casestudies/tree/master/Birthdays) sem búið var til fyrir sambærileg gögn frá Bandaríkjunum.
 
 Myndin hér að neðan sýnir niðurstöður tölfræðilíkansins sem mátað er að íslensku fæðingargögnunum. Gögnin og niðurstöður líkansins hafa verið sköluð þannig að lóðrétti ásinn sýnir hlutfallsleg frávik frá meðalfjölda fæðinga yfir allt tímabilið (\~12). Þannig táknar gildið 110 að fæðingartíðnin var 10% yfir heildarmeðaltalinu, eða um 13 fæðingar. Hins vegar táknar gildið 85 að fæðingartíðnin var 15% undir heildarmeðaltalinu, eða um 10 fæðingar.
 
@@ -95,6 +95,6 @@ Að lokum sýnir neðsta myndin áhrif daga ársins sem og fljótandi hátíðar
 
 ### Niðurlag
 
-Fjöldi fæðinga á Íslandi hefur farið fækkandi frá árinu 1970 á sama tíma og fjöldi keisaraskurða hefur margfaldast. Hlutfall keisaraskurða af heildarfjölda fæðinga á Íslandi var um 16% á árunum 1990-2022. Gögnin sýna að valkeisaraskurðum hafi í seinni tíð verið stýrt í auknum mæli á þriðjudaga og fimmtudaga og að fæðingar voru tíðari á virkum dögum heldur en um helgar. Árstíðaráhrifin ná hámarki í lok september (9 mánuðum eftir jólahátíðina) og falla svo skyndilega að lágmarkinu um jólahátíðina. Þá benda niðurstöður tölfræðilíkansins til þess að valkeisaraskurðum hafi verið stýrt frá mörgum af helstu hátíðardögum Íslendinga. Mest voru áhrif hátíðardaganna yfir jólin. Að lokum er athygli dregin að því að líkanið metur engin áhrif fyrir 29. dag febrúarmánaðar.
+Fjöldi fæðinga á Íslandi hefur farið fækkandi frá árinu 1970 á sama tíma og fjöldi keisaraskurða hefur margfaldast. Hlutfall keisaraskurða af heildarfjölda fæðinga á Íslandi var um 16% á árunum 1990-2022. Gögnin sýna að fæðingar voru tíðari á virkum dögum heldur en um helgar og að valkeisaraskurðum hafi í seinni tíð verið stýrt í auknum mæli frá mánudögum og miðvikudögum yfir á þriðjudaga og fimmtudaga. Árstíðaráhrifin ná hámarki í lok september (9 mánuðum eftir jólahátíðina) og falla svo skyndilega að lágmarkinu um jólahátíðina. Þá benda niðurstöður tölfræðilíkansins til þess að valkeisaraskurðum hafi verið stýrt frá mörgum af helstu hátíðardögum Íslendinga. Mest voru áhrif hátíðardaganna yfir jólin. Engin áhrif voru metin fyrir 29. dag febrúarmánaðar.
 
-# Heimildir
+<!-- # Heimildir -->

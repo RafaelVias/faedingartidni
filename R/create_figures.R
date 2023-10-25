@@ -97,7 +97,7 @@ p4 <- d %>%
   geom_point(color=set1[2],alpha=.5) +
   scale_x_date(date_breaks = "1 month", date_labels = "%b") +
   ggtitle(bquote("Meðalfjöldi fæðinga eftir dögum ársins"))+
-  labs(x="Dagur árs", y="Meðalfjöldi fæðinga") +
+  labs(x="Dagar ársins", y="Meðalfjöldi fæðinga") +
   theme_metill()
 
 ggsave(
@@ -118,7 +118,7 @@ p5 <- d %>%
   geom_point( size=4,shape=1, color="black",alpha=.6) +
   scale_x_continuous(breaks = 1:7, 
                      labels=c('Mán','Þri','Mið','Fim','Fös','Lau','Sun')) +
-  labs(x="Dagur vikunnar", y="Meðalfjöldi fæðinga") +
+  labs(x="Dagar vikunnar", y="Meðalfjöldi fæðinga") +
   ggtitle(bquote("Meðalfjöldi fæðinga eftir vikudögum"))+
   theme_metill()
 
@@ -143,7 +143,7 @@ p6 <- d %>%
   geom_point( size=4,shape=1, color="black",alpha=.6) +
   scale_x_continuous(breaks = 1:7, 
                      labels=c('Mán','Þri','Mið','Fim','Fös','Lau','Sun')) +
-  labs(x="Dagur vikunnar", y="Meðalfjöldi fæðinga") +
+  labs(x="Dagar vikunnar", y="Meðalfjöldi fæðinga") +
   scale_color_brewer()+
   ggtitle(bquote("Meðalfjöldi fæðinga eftir vikudögum yfir þrjú tímabil"))+
   guides(color=guide_legend(title="Tímabil:")) +
@@ -175,7 +175,7 @@ p7 <- d %>%
   scale_y_continuous(breaks = scales::pretty_breaks(),
                      expand = expansion(mult = scale_y))+
   labs(x="",
-       y="Hlutf. fjöldi fæðinga (%)") +
+       y="Hlutf. fjöldi fæðinga") +
   ggtitle("Væntigildi líkansins (f1+f2+f3+f4)") +
   theme_metill() #+
   # theme(plot.title = element_text(size=18))
@@ -189,7 +189,7 @@ p8 <- d %>%
   scale_y_continuous(breaks = scales::pretty_breaks(),
                      expand = expansion(mult = scale_y))+
   labs(x="",
-       y="Hlutf. fjöldi fæðinga (%)") +
+       y="Hlutf. fjöldi fæðinga") +
   ggtitle("Langtímahneigð (f1)") +
   theme_metill()
 
@@ -213,7 +213,7 @@ p9 <- d %>%
   geom_line(aes(y=meanEf2), color=set1[1], size=1,alpha=0.85) +
   geom_hline(yintercept=100, color='gray') +
   labs(x="",
-       y="Hlutf. fjöldi fæðinga (%)") +
+       y="Hlutf. fjöldi fæðinga") +
   ggtitle("Árstíðaráhrif (f2)") +
   theme_metill()
 
@@ -242,7 +242,7 @@ p10 <- ggplot(data=data.frame(x=rep(1:7,7),
            y=Ef_day_of_week[1:7]+c(-1,1,2.5,0.5,-1.5,0,0),
            label=c('Mán','Þri','Mið','Fim','Fös','Lau','Sun')) +
   labs(x="",
-       y="Hlutf. fjöldi fæðinga (%)") +
+       y="Hlutf. fjöldi fæðinga") +
   ggtitle("Vikudagaáhrif (f3)") + 
   theme_metill() +
   theme(legend.position = "none") 
@@ -279,8 +279,8 @@ p11 <- data.frame(x=as.Date("1992-01-01")+0:365, y=Ef4float) %>%
   annotate("text",x=as.Date("1992-02-29"),y=Ef4float[60]-3,label="29. feb.",size=dfs)+
   annotate("text",x=as.Date("1992-04-19"),y=Ef4float[110]-2,label="Páskad.",size=dfs)+
   annotate("text",x=as.Date("1992-06-07"),y=Ef4float[159]-2,label="Hvítasunnud.",size=dfs)+
-  annotate("text",x=as.Date("1992-05-10"),y=Ef4float[114],label="Sumard.f.",size=dfs)+
-  annotate("text",x=as.Date("1992-05-15"),y=Ef4float[122],label="1. maí",size=dfs)+
+  annotate("text",x=as.Date("1992-05-10"),y=Ef4float[114],label="Sumard.f.",size=dfs)+   # 12.
+  annotate("text",x=as.Date("1992-05-13"),y=Ef4float[122],label="1. maí",size=dfs)+
   annotate("text",x=as.Date("1992-05-22"),y=Ef4float[149]-2,label="Uppst.d.",size=dfs)+
   annotate("text",x=as.Date("1992-06-17"),y=Ef4float[169]+4,label="17. júní",size=dfs)+
   annotate("text",x=as.Date("1992-08-03"),y=Ef4float[216]-2,label="Fríd. verzlunarm.",size=dfs)+
@@ -289,7 +289,7 @@ p11 <- data.frame(x=as.Date("1992-01-01")+0:365, y=Ef4float) %>%
   annotate("text",x=as.Date("1992-12-24"),y=Ef4float[360]-2,label="Jólad.",size=dfs) +
   annotate("text",x=as.Date("1993-01-01"),y=Ef4float[366]+4,label="Gamlársd.",size=dfs) +
   theme_classic() +
-  ggtitle("Áhrif daga ársins og fljótandi hátíðardaga (f4)") +
+  ggtitle("Áhrif daga ársins og fljótandi hátíðardaga (f4)") + 
   theme_metill() +
   theme(legend.position = "bottom",
         legend.margin = margin(t = 0, unit='cm'))  
@@ -308,6 +308,5 @@ ggsave(
   height = 12,
   width = width1
 )
-  
 
 
