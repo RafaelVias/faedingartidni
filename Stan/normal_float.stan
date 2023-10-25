@@ -7,16 +7,16 @@ data {
   vector[N] y;                    // target variable
   int day_of_week[N];             // 
   int day_of_year[N];             // 
-  int fostudagurinn_langi[32];    // hatidardagar
-  int paskadagur[32];
-  int hvitasunna[32];
-  int skirdagur[32];
-  int laug_f_paska[32];
-  int annar_i_paskum[32];
-  int sumard_fyrsti[32];
-  int uppstigningardagur[32];
-  int annar_i_hvitasunnu[32];
-  int frid_verzlunarm[32];
+  int fostudagurinn_langi[33];    // hatidardagar
+  int paskadagur[33];
+  int hvitasunna[33];
+  int skirdagur[33];
+  int laug_f_paska[33];
+  int annar_i_paskum[33];
+  int sumard_fyrsti[33];
+  int uppstigningardagur[33];
+  int annar_i_hvitasunnu[33];
+  int frid_verzlunarm[33];
         
   real<lower=0> c_f1;  // factor c to determine the boundary value L
   int<lower=1> M_f1;   // number of basis functions for smooth function
@@ -42,7 +42,7 @@ transformed data {
 parameters {
   vector[M_f1] beta_f1;         // the basis functions coefficients for f1
   vector[2*J_f2] beta_f2;       // the basis functions coefficients for f2
-  vector[41] beta_f3;           // day of week effect  
+  vector[48] beta_f3;           // day of week effect  # 41
   vector[366] beta_f4;          // day of year effect
   vector[10] beta_f5;           // floating special days effects  // didn't have <upper=0>
   real<lower=0> lengthscale_f1; //
@@ -59,7 +59,7 @@ model {
   vector[M_f1] diagSPD_f1 = diagSPD_EQ(sigma_f1, lengthscale_f1, L_f1, M_f1);
   vector[2*J_f2] diagSPD_f2 = diagSPD_periodic(sigma_f2, lengthscale_f2, J_f2);
   // day of week and day of year effects
-  vector[42] f_day_of_week = append_row(0, beta_f3);
+  vector[49] f_day_of_week = append_row(0, beta_f3);  # 42
   vector[N] intercept = f_day_of_week[day_of_week] + beta_f4[day_of_year];
   // these floating days overrule day_of_week and day_of_year
   intercept[fostudagurinn_langi] = rep_vector(beta_f5[1], size(fostudagurinn_langi));
@@ -97,14 +97,14 @@ generated quantities {
   vector[N] f1;
   vector[N] f2;
   vector[N] f;
-  vector[42] f_day_of_week;
+  vector[49] f_day_of_week;   # 42
   vector[N] log_lik;
   {
     // spectral densities for f1, and f2
     vector[M_f1] diagSPD_f1 = diagSPD_EQ(sigma_f1, lengthscale_f1, L_f1, M_f1);
     vector[2*J_f2] diagSPD_f2 = diagSPD_periodic(sigma_f2, lengthscale_f2, J_f2);
     // day of week and day of year effects
-    vector[42] f_day_of_week_n = append_row(0, beta_f3);
+    vector[49] f_day_of_week_n = append_row(0, beta_f3);  # 42
     vector[N] intercept = 0.0 + f_day_of_week_n[day_of_week] + beta_f4[day_of_year];
     // these floating days overrule day_of_week and day_of_year
     intercept[fostudagurinn_langi] = rep_vector(beta_f5[1], size(fostudagurinn_langi));

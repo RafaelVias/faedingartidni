@@ -13,6 +13,7 @@ library(qqplotr)
 library(timeDate)
 library(gridExtra)
 library(grid)
+library(extrafont) # extrafont::fonts() 
 source("R/help_functions.R")
 set1 <- RColorBrewer::brewer.pal(7, "Set1")
 Sys.setlocale("LC_TIME", "en_GB.UTF-8")
@@ -60,7 +61,7 @@ p2 <- kd %>%
   scale_y_continuous(limits = c(0,NA),
                      expand = expansion(mult = c(0,0.1))) +
   scale_fill_identity(name = '', guide = 'legend',labels = c('10%-15% viðmið Alþjóðaheilbrigðismálastofnunarinnar')) +
-  ggtitle(bquote("Hlutfall keisaraskurða við fæðingar á Íslandi 1970-2020"))+
+  ggtitle(bquote("Hlutfall keisaraskurða við fæðingar á Íslandi 1970-2020")) +
   theme_metill()+
   theme(legend.position = "bottom") 
 
@@ -77,7 +78,7 @@ p3 <- d %>%
   ggplot(aes(x=date, y=births)) + 
   geom_point(color=set1[2],alpha=.2) +
   labs(x="Dagsetning", y="Fjöldi fæðinga") +
-  ggtitle(bquote("Daglegar fæðingar á Íslandi 1990-2021")) +
+  ggtitle(bquote("Daglegar fæðingar á Íslandi 1990-2022")) +
   theme_metill()
 
 ggsave(
@@ -133,7 +134,7 @@ ggsave(
 p6 <- d %>%
   mutate(`Tímabil`=case_when(year<=1999~"1990-1999",
                              year>=2000 & year<=2009~"2000-2009",
-                             year>=2010 & year<=2021~"2010-2021")) %>% 
+                             year>=2010 & year<=2022~"2010-2022")) %>% 
   group_by(day_of_week,`Tímabil`) %>%
   summarise(meanbirths=mean(births)) %>%
   ggplot(aes(x=day_of_week, y=meanbirths,color=`Tímabil`)) +
@@ -160,6 +161,7 @@ ggsave(
 
 source("R/run_model.R")
 
+
 scale_y <- c(0.02,0.02)
 
 # pic 7 - 12
@@ -173,7 +175,7 @@ p7 <- d %>%
   scale_y_continuous(breaks = scales::pretty_breaks(),
                      expand = expansion(mult = scale_y))+
   labs(x="",
-       y="Hlutf. fjöldi fæðinga") +
+       y="Hlutf. fjöldi fæðinga (%)") +
   ggtitle("Væntigildi líkansins (f1+f2+f3+f4)") +
   theme_metill() #+
   # theme(plot.title = element_text(size=18))
@@ -187,7 +189,7 @@ p8 <- d %>%
   scale_y_continuous(breaks = scales::pretty_breaks(),
                      expand = expansion(mult = scale_y))+
   labs(x="",
-       y="Hlutf. fjöldi fæðinga") +
+       y="Hlutf. fjöldi fæðinga (%)") +
   ggtitle("Langtímahneigð (f1)") +
   theme_metill()
 
@@ -211,38 +213,39 @@ p9 <- d %>%
   geom_line(aes(y=meanEf2), color=set1[1], size=1,alpha=0.85) +
   geom_hline(yintercept=100, color='gray') +
   labs(x="",
-       y="Hlutf. fjöldi fæðinga") +
+       y="Hlutf. fjöldi fæðinga (%)") +
   ggtitle("Árstíðaráhrif (f2)") +
   theme_metill()
 
-p10 <- ggplot(data=data.frame(x=rep(1:7,6),
+p10 <- ggplot(data=data.frame(x=rep(1:7,7),
                               y=Ef_day_of_week,
-                              period=rep(1:6,each=7)),
+                              period=rep(1:7,each=7)),
               aes(period,y,color=as.factor(x),group=as.factor(x))) +
   scale_color_brewer(name="",
                      labels=c('Mán','Þri','Mið','Fim','Fös','Lau','Sun'),
                      palette = "Set2") +
-  scale_x_continuous(breaks = 1:6,
+  scale_x_continuous(breaks = 1:7,
                      labels=c("'90-'94","'95-'99","'00-'04",
-                              "'05-'09","'10-'14","'15-'21"),
-                     limits = c(.5,6.4)) +
+                              "'05-'09","'10-'14","'15-'19","'20-'22")
+                     ,limits = c(.5,7.4)
+                     ) +
   geom_line() +
   geom_point() +
   geom_point(shape=1, color="black",alpha=.6) +
   geom_hline(yintercept=100, color='gray') +
   annotate("text",
-           x=6.4,
-           y=Ef_day_of_week[36:42]+c(0,0,0,1,3,0,0),
+           x=7.4,
+           y=Ef_day_of_week[43:49]+c(0,0,-1,0,1,0,0),
            label=c('Mán','Þri','Mið','Fim','Fös','Lau','Sun')) +
   annotate("text",
            x=0.6,
-           y=Ef_day_of_week[1:7]+c(-1,1,2.5,0.5,-1,0,0),
+           y=Ef_day_of_week[1:7]+c(-1,1,2.5,0.5,-1.5,0,0),
            label=c('Mán','Þri','Mið','Fim','Fös','Lau','Sun')) +
   labs(x="",
-       y="Hlutf. fjöldi fæðinga") +
-  ggtitle("Vikudagaáhrif (f3)") +
-  theme_metill() +
-  theme(legend.position = "none")
+       y="Hlutf. fjöldi fæðinga (%)") +
+  ggtitle("Vikudagaáhrif (f3)") + 
+  theme(legend.position = "none") +
+  theme_metill()
 
 p11 <- data.frame(x=as.Date("1992-01-01")+0:365, y=Ef4float) %>%
   ggplot(aes(x=x,y=y)) + geom_line(color=set1[1]) +
@@ -287,9 +290,9 @@ p11 <- data.frame(x=as.Date("1992-01-01")+0:365, y=Ef4float) %>%
   annotate("text",x=as.Date("1993-01-01"),y=Ef4float[366]+4,label="Gamlársd.",size=dfs) +
   theme_classic() +
   ggtitle("Áhrif daga ársins og fljótandi hátíðardaga (f4)") +
-  theme_metill()+
   theme(legend.position = "bottom",
-        legend.margin = margin(t = 0, unit='cm')) 
+        legend.margin = margin(t = 0, unit='cm'))  +
+  theme_metill()
 
 ggsave(
   p11+ggtitle("Áhrif daga ársins og fljótandi hátíðardaga") + theme_metill(type="blog")+ theme(legend.position = "bottom",legend.margin = margin(t = 0, unit='cm')),
