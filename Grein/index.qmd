@@ -98,4 +98,3 @@ fac
 
 Fjöldi fæðinga á Íslandi hefur farið fækkandi frá árinu 1970 á sama tíma og fjöldi keisaraskurða hefur margfaldast. Hlutfall keisaraskurða af heildarfjölda fæðinga á Íslandi var um 16% á árunum 1990-2022. Gögnin sýna að fæðingar voru tíðari á virkum dögum heldur en um helgar og að valkeisaraskurðum hafi í seinni tíð verið stýrt í auknum mæli frá mánudögum og miðvikudögum yfir á þriðjudaga og fimmtudaga. Árstíðaráhrifin ná hámarki í lok september (9 mánuðum eftir jólahátíðina) og falla svo skyndilega að lágmarkinu um jólahátíðina. Þá benda niðurstöður tölfræðilíkansins til þess að valkeisaraskurðum hafi verið stýrt frá mörgum af helstu hátíðardögum Íslendinga. Mest voru áhrif hátíðardaganna yfir jólin. Líkanið metur engin áhrif 29. dag febrúarmánaðar.
 
-<!-- # Heimildir -->
