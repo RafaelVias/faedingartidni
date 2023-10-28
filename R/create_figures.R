@@ -172,8 +172,14 @@ p7 <- d %>%
   geom_point(color=set1[2], alpha=0.03) +
   geom_line(aes(y=Ef), color=set1[1], alpha=0.85) +
   geom_hline(yintercept=100, color='gray') +
-  scale_y_continuous(breaks = scales::pretty_breaks(),
-                     expand = expansion(mult = scale_y))+
+  scale_y_continuous(
+    breaks = scales::pretty_breaks(),
+    expand = expansion(mult = scale_y),
+    labels = function(x) if_else(x>=100, 
+                                 paste0(abs(x-100),"%"),
+                                 paste0("-",abs(x-100),"%")
+                                 )
+    ) +
   labs(x="",
        y="Hlutf. fjöldi fæðinga") +
   ggtitle("Væntigildi líkansins (f1+f2+f3+f4)") +
@@ -186,8 +192,14 @@ p8 <- d %>%
   geom_point(color=set1[2], alpha=0.03) +
   geom_line(aes(y=Ef1), color=set1[1],size=1,alpha=0.85) +
   geom_hline(yintercept=100, color='gray') +
-  scale_y_continuous(breaks = scales::pretty_breaks(),
-                     expand = expansion(mult = scale_y))+
+  scale_y_continuous(
+    breaks = scales::pretty_breaks(),
+    expand = expansion(mult = scale_y),
+    labels = function(x) if_else(x>=100, 
+                                 paste0(abs(x-100),"%"),
+                                 paste0("-",abs(x-100),"%")
+                                 )
+    ) +
   labs(x="",
        y="Hlutf. fjöldi fæðinga") +
   ggtitle("Langtímahneigð (f1)") +
@@ -199,8 +211,14 @@ p9 <- d %>%
   summarise(meanbirths=mean(births_relative100), meanEf2=mean(Ef2)) %>%
   ggplot(aes(x=as.Date("1991-12-31")+day_of_year2, y=meanbirths)) +
   geom_point(color=set1[2], alpha=0.3) +
-  scale_y_continuous(breaks = scales::pretty_breaks(),
-                     expand = expansion(mult = scale_y))+
+  scale_y_continuous(
+    breaks = scales::pretty_breaks(),
+    expand = expansion(mult = scale_y),
+    labels = function(x) if_else(x>=100, 
+                                 paste0(abs(x-100),"%"),
+                                 paste0("-",abs(x-100),"%")
+    )
+  ) +
   scale_x_continuous(breaks=c(as.Date("1992-01-01"),as.Date("1992-02-01"),
                               as.Date("1992-03-01"),as.Date("1992-04-01"),
                               as.Date("1992-05-01"),as.Date("1992-06-01"),
@@ -224,6 +242,14 @@ p10 <- ggplot(data=data.frame(x=rep(1:7,7),
   scale_color_brewer(name="",
                      labels=c('Mán','Þri','Mið','Fim','Fös','Lau','Sun'),
                      palette = "Set2") +
+  scale_y_continuous(
+    breaks = scales::pretty_breaks(),
+    expand = expansion(mult = scale_y*2),
+    labels = function(x) if_else(x>=100, 
+                                 paste0(abs(x-100),"%"),
+                                 paste0("-",abs(x-100),"%")
+    )
+  ) +
   scale_x_continuous(breaks = 1:7,
                      labels=c("'90-'94","'95-'99","'00-'04",
                               "'05-'09","'10-'14","'15-'19","'20-'22")
@@ -258,8 +284,14 @@ p11 <- data.frame(x=as.Date("1992-01-01")+0:365, y=Ef4float) %>%
                               as.Date("1993-01-01")),
                      labels = c("Jan","Feb","Mar","Apr","Maí","Jún",
                                 "Júl","Ágú","Sep","Okt","Nóv","Des","Jan")) +
-  scale_y_continuous(breaks = scales::pretty_breaks(),
-                     expand = expansion(mult = c(0.05,0.02)))+
+  scale_y_continuous(
+    breaks = scales::pretty_breaks(),
+    expand = expansion(mult = c(0.05,0.02)),
+    labels = function(x) if_else(x>=100, 
+                                 paste0(abs(x-100),"%"),
+                                 paste0("-",abs(x-100),"%")
+    )
+  ) +
   scale_fill_manual() +
   geom_hline(yintercept=100, color='gray') +
   labs(x="",
@@ -303,7 +335,7 @@ ggsave(
 
 
 ggsave(
-  (p7+p8)/(p9+p10)/p11,
+  (p7+p8)/(p9+p10)/p11 + plot_annotation(theme = theme(plot.margin = margin(0,0,0,0))),
   filename = "Figures/p12.png",
   height = 12,
   width = width1
